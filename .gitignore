@@ -1,0 +1,4 @@
+.npm-cache/
+.tmp-tests/
+node_modules/
+*.tgz

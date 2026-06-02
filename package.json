@@ -1,0 +1,40 @@
+{
+  "name": "privacy-blur",
+  "version": "0.1.0",
+  "description": "Official Node.js SDK and CLI for PrivacyBlur visual privacy automation.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "bin": {
+    "privacy-blur": "./src/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/client.js && node --check src/http.js && node --check src/dataset.js && node --check src/cli.js"
+  },
+  "keywords": [
+    "bgblur",
+    "privacy-blur",
+    "privacy",
+    "face-blur",
+    "license-plate-blur",
+    "video-redaction",
+    "image-redaction",
+    "visual-privacy"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "license": "MIT"
+}
