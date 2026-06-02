@@ -47,9 +47,13 @@ export class APIClient {
   }
 
   async uploadFile(filePath, target) {
+    const info = await stat(filePath);
     const response = await this.request("PUT", target.uploadUrl, {
       body: createReadStream(filePath),
-      headers: { "Content-Type": guessContentType(filePath, target.mediaKind) },
+      headers: {
+        "Content-Length": String(info.size),
+        "Content-Type": guessContentType(filePath, target.mediaKind)
+      },
       includeAuth: false
     });
     await this.raiseForStatus(response);

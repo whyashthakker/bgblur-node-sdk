@@ -15,6 +15,7 @@ import {
 
 function createMockFetch({ mediaKind = "image", jobStatuses = ["completed"], uploadStatus = 200 } = {}) {
   const seenUploadAuthHeaders = [];
+  const seenUploadContentLengthHeaders = [];
   const seenDownloadAuthHeaders = [];
   const seenSubmittedImageUrls = [];
   const statuses = [...jobStatuses];
@@ -32,6 +33,7 @@ function createMockFetch({ mediaKind = "image", jobStatuses = ["completed"], upl
     }
     if (parsed.host === "uploads.example.com" && method === "PUT") {
       seenUploadAuthHeaders.push(headers.get("Authorization"));
+      seenUploadContentLengthHeaders.push(headers.get("Content-Length"));
       return new Response("");
     }
     if (parsed.pathname === "/api/v1/images/face-blur" && method === "POST") {
@@ -70,6 +72,7 @@ function createMockFetch({ mediaKind = "image", jobStatuses = ["completed"], upl
   };
 
   mockFetch.seenUploadAuthHeaders = seenUploadAuthHeaders;
+  mockFetch.seenUploadContentLengthHeaders = seenUploadContentLengthHeaders;
   mockFetch.seenDownloadAuthHeaders = seenDownloadAuthHeaders;
   mockFetch.seenSubmittedImageUrls = seenSubmittedImageUrls;
   return mockFetch;
@@ -93,6 +96,7 @@ test("faceBlur downloads a processed image", async (t) => {
   assert.equal(result, output);
   assert.equal(await readFile(output, "utf8"), "processed");
   assert.deepEqual(fetch.seenUploadAuthHeaders, [null]);
+  assert.deepEqual(fetch.seenUploadContentLengthHeaders, ["3"]);
   assert.deepEqual(fetch.seenDownloadAuthHeaders, [null]);
   assert.deepEqual(fetch.seenSubmittedImageUrls, ["https://uploads.example.com/presigned"]);
 });

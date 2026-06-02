@@ -16,6 +16,7 @@
   },
   "files": [
     "src",
+    "examples/node",
     "README.md",
     "LICENSE"
   ],

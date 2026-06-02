@@ -236,6 +236,17 @@ Common use cases include:
 - Customer support, legal, security, and compliance media review.
 - Creator, journalist, researcher, and business privacy workflows.
 
+## Examples
+
+A runnable Node.js example app is available in [`examples/node`](examples/node).
+
+```bash
+cd examples/node
+npm install
+export BGBLUR_AI_API_KEY="YOUR_API_KEY"
+node index.js face-blur ./input.jpg ./output/face-blurred.jpg
+```
+
 ## Keywords
 
 AI face blur, video anonymization, license plate blur, image redaction, video redaction, privacy SDK, Node.js SDK, JavaScript SDK, TypeScript SDK, dataset anonymization, blur anything, object blur, visual privacy automation.

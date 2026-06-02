@@ -1,0 +1,20 @@
+{
+  "name": "privacy-blur-node-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Example Node.js application using @bgblur/privacy-blur.",
+  "scripts": {
+    "face-blur": "node index.js face-blur ./input.jpg ./output/face-blurred.jpg",
+    "license-plate-blur": "node index.js license-plate-blur ./car.jpg ./output/plates-blurred.jpg",
+    "blur-anything": "node index.js blur-anything ./street.jpg ./output/objects-blurred.jpg person",
+    "face-anonymize": "node index.js face-anonymize ./interview.mp4 ./output/anonymous-video.mp4",
+    "dataset": "node index.js dataset ./dataset ./output/dataset-private"
+  },
+  "dependencies": {
+    "@bgblur/privacy-blur": "file:../.."
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}
