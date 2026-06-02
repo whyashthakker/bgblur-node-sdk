@@ -1,6 +1,6 @@
 {
   "name": "@bgblur/privacy-blur",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Node.js SDK and CLI for PrivacyBlur visual privacy automation.",
   "type": "module",
   "main": "./src/index.js",
@@ -16,7 +16,10 @@
   },
   "files": [
     "src",
-    "examples/node",
+    "examples/node/.env.example",
+    "examples/node/index.js",
+    "examples/node/package.json",
+    "examples/node/README.md",
     "README.md",
     "LICENSE"
   ],

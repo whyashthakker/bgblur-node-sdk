@@ -1,0 +1,10 @@
+node_modules/
+output/
+dataset/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.mp4
+*.mov
+*.webm
