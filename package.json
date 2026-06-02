@@ -20,6 +20,10 @@
     "examples/node/index.js",
     "examples/node/package.json",
     "examples/node/README.md",
+    "examples/express-server-with-s3/.env.example",
+    "examples/express-server-with-s3/server.js",
+    "examples/express-server-with-s3/package.json",
+    "examples/express-server-with-s3/README.md",
     "README.md",
     "LICENSE"
   ],

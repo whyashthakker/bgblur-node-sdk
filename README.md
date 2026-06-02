@@ -247,6 +247,17 @@ export BGBLUR_AI_API_KEY="YOUR_API_KEY"
 node index.js face-blur ./input.jpg ./output/face-blurred.jpg
 ```
 
+An Express server example with S3 result uploads is available in [`examples/express-server-with-s3`](examples/express-server-with-s3).
+
+```bash
+cd examples/express-server-with-s3
+npm install
+export BGBLUR_AI_API_KEY="YOUR_API_KEY"
+export AWS_REGION="us-east-1"
+export S3_BUCKET="your-result-bucket"
+npm start
+```
+
 ## Keywords
 
 AI face blur, video anonymization, license plate blur, image redaction, video redaction, privacy SDK, Node.js SDK, JavaScript SDK, TypeScript SDK, dataset anonymization, blur anything, object blur, visual privacy automation.
