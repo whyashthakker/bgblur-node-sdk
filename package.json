@@ -1,12 +1,12 @@
 {
-  "name": "privacy-blur",
+  "name": "@bgblur/privacy-blur",
   "version": "0.1.0",
   "description": "Official Node.js SDK and CLI for PrivacyBlur visual privacy automation.",
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "bin": {
-    "privacy-blur": "./src/cli.js"
+    "privacy-blur": "src/cli.js"
   },
   "exports": {
     ".": {

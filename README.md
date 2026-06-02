@@ -1,8 +1,8 @@
-# privacy-blur
+# @bgblur/privacy-blur
 
 Official Node.js SDK and CLI for [BGBlur.com](https://www.bgblur.com/en), the PrivacyBlur AI visual privacy platform for blurring and anonymizing faces, license plates, and custom objects in images and videos.
 
-`privacy-blur` is the npm SDK for BGBlur.com. Use it to add automated privacy protection, visual redaction, and dataset anonymization workflows to Node.js apps, backend jobs, scripts, and command-line pipelines.
+`@bgblur/privacy-blur` is the npm SDK for BGBlur.com. Use it to add automated privacy protection, visual redaction, and dataset anonymization workflows to Node.js apps, backend jobs, scripts, and command-line pipelines.
 
 BGBlur.com helps creators, developers, businesses, and AI teams protect visual privacy in photos and videos. It is built for workflows where faces, license plates, people, vehicles, backgrounds, or sensitive objects need to be blurred before sharing, publishing, reviewing, or using media in datasets.
 
@@ -10,10 +10,10 @@ BGBlur.com helps creators, developers, businesses, and AI teams protect visual p
 ## Installation
 
 ```bash
-npm install privacy-blur
+npm install @bgblur/privacy-blur
 ```
 
-The npm package name is `privacy-blur`.
+The npm package name is `@bgblur/privacy-blur`.
 
 ## Authentication
 
@@ -34,7 +34,7 @@ Or pass it directly when creating a client.
 ## Quick Start
 
 ```js
-import { PrivacyBlur } from "privacy-blur";
+import { PrivacyBlur } from "@bgblur/privacy-blur";
 
 const client = new PrivacyBlur({
   apiKey: process.env.BGBLUR_AI_API_KEY
@@ -52,7 +52,7 @@ await client.faceBlur({
 Blur faces:
 
 ```js
-import { PrivacyBlur } from "privacy-blur";
+import { PrivacyBlur } from "@bgblur/privacy-blur";
 
 const client = new PrivacyBlur({
   apiKey: process.env.BGBLUR_AI_API_KEY
@@ -68,7 +68,7 @@ await client.faceBlur({
 Blur license plates:
 
 ```js
-import { PrivacyBlur } from "privacy-blur";
+import { PrivacyBlur } from "@bgblur/privacy-blur";
 
 const client = new PrivacyBlur({
   apiKey: process.env.BGBLUR_AI_API_KEY
@@ -83,7 +83,7 @@ await client.licensePlateBlur({
 Blur anything with a prompt:
 
 ```js
-import { PrivacyBlur } from "privacy-blur";
+import { PrivacyBlur } from "@bgblur/privacy-blur";
 
 const client = new PrivacyBlur({
   apiKey: process.env.BGBLUR_AI_API_KEY
@@ -99,7 +99,7 @@ await client.blurAnything({
 Anonymize faces in video:
 
 ```js
-import { PrivacyBlur } from "privacy-blur";
+import { PrivacyBlur } from "@bgblur/privacy-blur";
 
 const client = new PrivacyBlur({
   apiKey: process.env.BGBLUR_AI_API_KEY
@@ -116,7 +116,7 @@ await client.faceAnonymize({
 `DatasetProcessor` helps prepare privacy-safe image datasets by applying BGBlur operations across a folder while preserving folder structure.
 
 ```js
-import { DatasetProcessor } from "privacy-blur";
+import { DatasetProcessor } from "@bgblur/privacy-blur";
 
 const processor = new DatasetProcessor({
   apiKey: process.env.BGBLUR_AI_API_KEY,
@@ -174,7 +174,7 @@ import {
   InsufficientCreditsError,
   PrivacyBlur,
   PrivacyBlurError
-} from "privacy-blur";
+} from "@bgblur/privacy-blur";
 
 try {
   const client = new PrivacyBlur({
@@ -201,7 +201,7 @@ try {
 Type declarations are included with the package.
 
 ```ts
-import { PrivacyBlur, type BlurType } from "privacy-blur";
+import { PrivacyBlur, type BlurType } from "@bgblur/privacy-blur";
 
 const blurType: BlurType = "pixelated";
 const client = new PrivacyBlur({
